@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 2</title>
+    <link rel="shortcut icon" href="img/logo-site.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styleP2.css">
+</head>
+<body>
+    <header id="header">
+        <div class="head">
+            <div class="inicio">
+                <img src="img/logo.svg" alt="logo do site">
+                <a href="#" class="icon" onclick="menu()" id="icon"><img src="img/menu.svg" alt="icone do menu"></a>
+            </div>
+            <nav id="nav" class="nav">
+                <a href="#home" class="link">Home</a>
+                <a href="#projeto" class="link">Projetos</a>
+                <a href="#sobre" class="link">Sobre Mim</a>
+                <a href="#contato" class="link">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="titulo">Projeto 2 - Jogo do Pulo</h1>
+
+        <div class="game">
+            <div class="label">
+                <div class="score">
+                    <h2>Pontuação</h2>
+                    <span class="score-value">0000</span>
+                </div>
+            </div>
+            <div class="game-board">
+                <div class="pag1" id="pag1">
+                    <h2>Escolha seu personagem:</h2>
+                    <div class="personagens">
+                        <img src="img/mario.gif" alt="mario" class="mario" onclick="mario()">
+                        <img src="img/sonic.gif" alt="sonic" class="sonic" onclick="sonic()">
+                    </div>
+                </div>
+
+                <div class="pag1 invisivel" id="pag2">
+                    <h2 class="subtitulo">Para começar o jogo pressione</h2>
+                </div>
+
+                <div class="pag1 invisivel" id="gameover">
+                    <h2>Game Over!</h2>
+                </div>
+
+                <img src="img/clouds.png" alt="nuvem" class="nuvem">
+                <img src="img/pipe.png" alt="tubo" class="tubo">
+            </div>
+
+            <span class="btn">Iniciar!</span>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="foot">
+            <div class="logos">
+                <img src="img/logo.svg" alt="logo do site">
+                <div class="redes">
+                    <a href="#"><img src="img/gitHub.svg" alt="link do github"></a>
+                    <a href="#"><img src="img/linkedin.svg" alt="link do linkdin"></a>
+                </div>
+            </div>
+            <p>Site desenvolvido por João Guilherme</p>
+            <div class="copy">
+                <img src="img/copyright.svg" alt="copyright">
+                <p>Copyright 2023 João Dev</p>
+            </div>
+        </div>
+    </footer>
+    <script src="scriptP2.js"></script>
+</body>
+</html>

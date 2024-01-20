@@ -1,24 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
+    <title>Projeto 2 - Jogo do Pulo</title>
+    <link rel="shortcut icon" href="img/logo-site.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/projeto2.css">
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto 2</title>
-    <link rel="shortcut icon" href="img/logo-site.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styleP2.css">
+    <!-- SEO -->
+    <meta name="author" content="João Guilherme">
+    <meta name="description" content="Jogo do pulo é um jogo que o usuário tem que pular os obstáculos que estão vindo em sua direção.">
+    <meta name="keywords" content="jogo do mario, html, javascript">
+    <!--SMO-->
+    <meta property="og:title" content="Portifólio do João">
+    <meta property="og:site_name" content="João Dev">
+    <meta property="og:description" content="Jogo do pulo é um jogo que o usuário tem que pular os obstáculos que estão vindo em sua direção.">
+    <meta property="og:url" content="https://joaodev.site">
+    <meta property="og:image" content="img/Projeto2.jpeg">
+    <meta property="og:image:type" content="image/jpeg">
 </head>
 <body>
-    <header id="header">
+    <header>
         <div class="head">
             <div class="inicio">
-                <img src="img/logo.svg" alt="logo do site">
-                <a href="#" class="icon" onclick="menu()" id="icon"><img src="img/menu.svg" alt="icone do menu"></a>
+                <a href="#"><img class="logo" src="img/logo.svg" alt="logo do site"></a>
+                <img class="icon" src="img/menu.svg" alt="icone do menu sanduiche">
             </div>
-            <nav id="nav" class="nav">
-                <a href="#home" class="link">Home</a>
-                <a href="#projeto" class="link">Projetos</a>
-                <a href="#sobre" class="link">Sobre Mim</a>
-                <a href="#contato" class="link">Contato</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#">Sobre Mim</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -26,7 +44,7 @@
     <main>
         <h1 class="titulo">Projeto 2 - Jogo do Pulo</h1>
 
-        <div class="game">
+        <section class="game">
             <div class="label">
                 <div class="score">
                     <h2>Pontuação</h2>
@@ -34,47 +52,51 @@
                 </div>
             </div>
             <div class="game-board">
-                <div class="pag1" id="pag1">
+                <div class="pag1">
                     <h2>Escolha seu personagem:</h2>
                     <div class="personagens">
-                        <img src="img/mario.gif" alt="mario" class="mario" onclick="mario()">
-                        <img src="img/sonic.gif" alt="sonic" class="sonic" onclick="sonic()">
+                        <img src="img/mario.gif" alt="mario" class="mario">
+                        <img src="img/sonic.gif" alt="sonic" class="sonic">
                     </div>
                 </div>
 
-                <div class="pag1 invisivel" id="pag2">
+                <div class="pag2 hidden">
                     <h2 class="subtitulo">Para começar o jogo pressione</h2>
                 </div>
 
-                <div class="pag1 invisivel" id="gameover">
+                <div class="game-over hidden">
                     <h2>Game Over!</h2>
+                    <div class="btns">
+                        <button class="outro-personagem">Escolher Personagem!</button>
+                        <button class="restart">Reiniciar!</button>
+                    </div>
                 </div>
 
                 <img src="img/clouds.png" alt="nuvem" class="nuvem">
                 <img src="img/pipe.png" alt="tubo" class="tubo">
             </div>
 
-            <span class="btn">Iniciar!</span>
+            <span class="btn hidden">Iniciar!</span>
 
-        </div>
+        </section>
     </main>
 
     <footer>
-        <div class="foot">
-            <div class="logos">
-                <img src="img/logo.svg" alt="logo do site">
-                <div class="redes">
-                    <a href="#"><img src="img/gitHub.svg" alt="link do github"></a>
-                    <a href="#"><img src="img/linkedin.svg" alt="link do linkdin"></a>
-                </div>
-            </div>
-            <p>Site desenvolvido por João Guilherme</p>
-            <div class="copy">
-                <img src="img/copyright.svg" alt="copyright">
-                <p>Copyright 2023 João Dev</p>
+        <div class="logos">
+            <img src="img/logo.svg" alt="logo do site no roapé">
+            <div class="redes">
+                <a href="#" target="_blank"><img src="img/github.svg" alt="link do github"></a>
+                <a href="#" target="_blank"><img src="img/linkedin.svg" alt="link do linkedin"></a>
             </div>
         </div>
+        <p>Site desenvolvido por João Guilherme</p>
+        <div class="copy">
+            <img src="img/copyright.svg" alt="copyright">
+            <p>Copyright 2024 João Dev</p>
+        </div>
     </footer>
-    <script src="scriptP2.js"></script>
+
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/proj-02.js"></script>
 </body>
 </html>

@@ -1,0 +1,266 @@
+main {
+    width: 100%;
+    min-height: calc(100vh - 70px - 88px);
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo {
+    font-size: 25px;
+    color: #000;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    padding: 8px 10px 0 10px;
+    margin: 20px 21px 0 21px;
+    border-bottom: 1px solid #000;
+}
+
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0 0 0;
+}
+
+.label {
+    border: 8px solid #000;
+    width: 100%;
+}
+
+.score {
+    display: flex;
+    padding: 10px 16px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    width: 100%;
+}
+
+.score h2 {
+    font-size: 25px;
+    color: #000;
+}
+
+.score-value {
+    font-size: 25px;
+    color: #000;
+}
+
+.game-board {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #3084f2 0%, #F2F1F0 100%);
+    border-bottom: 10px solid #0b7e01;
+    text-align: center;
+}
+
+.nuvem {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 200px;
+}
+
+.tubo {
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    right: 40px;
+}
+.personagem {
+    display: flex;
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.pag1,
+.pag2,
+.game-over {
+    display: flex;
+    width: inherit;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.game-over {
+    flex-direction: column;
+}
+
+.pag1 h2,
+.pag2 h2 {
+    font-size: 25px;
+    color: #fff;
+}
+
+.game-over h2 {
+    font-size: 30px;
+    color: #fff;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0 0 0;
+}
+
+.outro-personagem,
+.restart {
+    display: flex;
+    padding: 10px 15px;
+    font-size: 20px;
+    background: #3084f2;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+}
+
+.subtitulo::after {
+    content: " o botão abaixo!";
+}
+
+.personagens {
+    position: absolute;
+    bottom: 20px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    align-items: flex-end;
+    opacity: 1;
+}
+
+.mario {
+    width: 100px;
+    cursor: pointer;
+}
+
+.sonic {
+    width: 80px;
+    cursor: pointer;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    padding: 20px 60px;
+    margin: 10px auto 0 auto;
+    color: #000;
+    font-size: 25px;
+    background: #d9d9d9;
+    border: 1px solid #000;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.animatubo {
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.animanuvem {
+    animation: cloud-animation 15s infinite linear;
+}
+
+.jump {
+    animation: jump 800ms ease-out;
+}
+
+/* Animações */
+@keyframes pipe-animation {
+    from {
+        right: -55px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes cloud-animation {
+    from {
+        right: -200px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 100px;
+    }
+    50% {
+        bottom: 100px;
+    }
+    60% {
+        bottom: 100px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+/* Responsividade*/
+@media screen and (min-width: 600px) {
+    .titulo {
+        width: 560px;
+        margin: 20px auto 0 auto;
+    }
+    .score {
+        width: 560px;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+    .personagens {
+        gap: 80px;
+    }
+    .animatubo {
+        animation: pipe-animation 1.5s infinite linear;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .titulo {
+        width: 1136px;
+    }
+    .score {
+        width: 1136px;
+    }
+    .personagens {
+        gap: 120px;
+    }
+    .subtitulo::after {
+        content: " qualquer tecla!";
+    }
+    .game-board {
+        height: 370px;
+    }
+    .btn {
+        display: none;
+    }
+    .animatubo {
+        animation: pipe-animation 2s infinite linear;
+    }
+}
